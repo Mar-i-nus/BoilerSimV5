@@ -1,0 +1,116 @@
+/* This is the style for the entire page. */
+body, html {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+#content {
+    display: flex;
+    height: calc(100% - 100px); /* Subtract the height of the terminal */
+}
+
+#boilerContainer {
+    width: 33.3333%;
+    height: 100%;
+    border-right: 1px solid black;
+    overflow-y: auto; /* Allows scrolling if the content is too tall */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#blocklyDiv {
+    width: 66.6666%;
+    height: 100%;
+    overflow-y: auto; /* Allows scrolling if the content is too tall */
+}
+
+#divider {
+    background: #aaa;
+    width: 5px;
+    cursor: ew-resize;
+    z-index: 10;
+}
+
+#terminalContainer {
+    width: 100%;
+    height: 100px; /* Set the height of the terminal */
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#terminal {
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    color: #0f0;
+    border: none;
+    padding: 5px;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#runButton {
+    position: absolute;
+    bottom: 110px; /* Just above the terminal container */
+    right: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+#connectArduinoButton {
+    position: absolute;
+    bottom: 550px; /* Just above the terminal container */
+    right: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#saveButton {
+    position: absolute;
+    bottom: 600px; /* Just above the terminal container */
+    right: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#loadButton {
+    position: absolute;
+    bottom: 650px; /* Just above the terminal container */
+    right: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+#runButton:hover {
+    background-color: #45a049;
+}
+
+#connectArduinoButton:hover {
+    background-color: #45a049;
+}
+
+
+/* Add your sensors styles here */
+/* ... */

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Boiler Simulatie met Blockly</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/blockly/blockly.min.js"></script>
+    <script src="https://unpkg.com/blockly@5.1.0/blockly_compressed.js"></script>
+    <script src="https://unpkg.com/blockly@5.1.0/msg/js/en.js"></script>
+</head>
+<body>
+
+<div id="content">
+    <div id="boilerContainer">
+        <div id="boiler">
+            <div class="sensor" id="sensor1"><span class="temp">Sensor 1: --°C</span></div>
+            <div class="sensor" id="sensor2"><span class="temp">Sensor 2: --°C</span></div>
+            <div class="sensor" id="sensor3"><span class="temp">Sensor 3: --°C</span></div>
+            <div class="sensor" id="sensor4"><span class="temp">Sensor 4: --°C</span></div>
+            <div class="sensor" id="sensor5"><span class="temp">Sensor 5: --°C</span></div>
+            <div class="sensor" id="sensor6"><span class="temp">Sensor 6: --°C</span></div>
+        </div>
+    </div>
+    <div id="divider"></div>
+    <div id="blocklyDiv"></div>
+</div>
+
+<div id="terminalContainer">
+    <textarea id="terminal" readonly></textarea>
+</div>
+
+<xml id="toolbox" style="display: none">
+    <block type="set_sensor_value"></block>
+    <block type="delay"></block>
+    <block type="while_timer"></block>
+    <block type="if_else_custom"></block>
+    <block type="repeat_for"></block> 
+    <block type="set_all_sensors_value"></block> 
+    <block type="log_to_terminal"></block> 
+    <block type="get_boiler_status"></block>
+</xml>
+
+<button id="runButton">Start Script</button>
+<button id="connectArduinoButton">Verbinden</button>
+<button id="saveButton">Opslaan</button>
+<input type="file" id="fileInput" style="display: none;" accept=".xml"/>
+<button id="loadButton">Laden</button>
+<script src="webserial.js"></script>
+<script src="blockly_blocks.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
